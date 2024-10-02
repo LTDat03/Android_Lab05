@@ -30,7 +30,8 @@ export default function Screen03({navigation}) {
           </Pressable>
         </View>
         <View style={styles.footer}>
-          <TouchableOpacity style={styles.btn}>
+          <TouchableOpacity style={styles.btn}
+          onPress={() => navigation.navigate("Screen04")}>
             <Text style={styles.buttonText}>XONG</Text>
           </TouchableOpacity>
         </View>
