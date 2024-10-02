@@ -1,7 +1,7 @@
 import { Text,View,Image,TouchableOpacity,StyleSheet,Pressable } from 'react-native';
 import {SetStateAction, useState} from 'react'
 
-export default function Screen02() {
+export default function Screen03({navigation}) {
   return (
     <View style={styles.container}>
       <View style={styles.productCard}>
@@ -49,6 +49,7 @@ const styles = StyleSheet.create({
     flexDirection:'row',
     justifyContent:'space-between',
     paddingHorizontal: 10,
+    backgroundColor:'#FFFFFF'
   },
   productInfo:{
     justifyContent:'center',

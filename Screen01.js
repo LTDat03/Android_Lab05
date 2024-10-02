@@ -4,7 +4,8 @@ import AntDesign from '@expo/vector-icons/AntDesign';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {useState} from 'react'
 
-export default function Screen01() {
+
+function Screen01({navigation}) {
  const [rating, setRating] = useState(0); 
   
   const renderStars = () => {
@@ -46,9 +47,11 @@ export default function Screen01() {
             <AntDesign name="questioncircleo" size={20} color="black"  />
           </View>
           <View style={{alignItems:'center',paddingTop:10}}>
-            <TouchableOpacity style={styles.colorButton}> 
+            <TouchableOpacity style={styles.colorButton}
+            onPress={() => navigation.navigate("Screen02")}> 
               <Text style={styles.nameProduct}>4 MÀU-CHỌN MÀU</Text>
               <AntDesign name="right" size={10} color="black" />
+              
             </TouchableOpacity>
           </View>
         </View>
@@ -140,4 +143,6 @@ const styles = StyleSheet.create({
     fontSize:15,
     fontWeight:'400'
   },
-})
+});
+
+export default Screen01;
